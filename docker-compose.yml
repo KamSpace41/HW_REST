@@ -1,0 +1,11 @@
+
+version: '3.8'
+services:
+  authorization-app:
+    container_name: spring-authorization-app
+    build: ./
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+    restart: unless-stopped
